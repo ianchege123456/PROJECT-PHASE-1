@@ -1,0 +1,21 @@
+# netlify.toml
+
+# Build settings
+[build]
+  command = "npm run build"  # Replace with your build command if using npm scripts
+  publish = "dist"  # Replace 'dist' with your build output directory
+
+# Basic build settings
+[build.environment]
+  NODE_VERSION = "14"  # Specify the Node.js version used in your project
+
+# Production context
+[context.production]
+  command = "npm run build"  # Specify the production build command
+  publish = "dist"  # Specify the production build output directory
+  NODE_ENV = "production"  # Set Node environment to production
+
+# Deploy settings
+[deploy]
+  site = "your-kicks-shoe-store"  # Replace with your Netlify site name
+  production = true  # Deploy to production
